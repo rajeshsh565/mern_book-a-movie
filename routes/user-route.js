@@ -13,7 +13,7 @@ const {
 router.route("/").get(getAllUsers);
 router.route("/signup").post(signUp);
 router.route("/login").post(login);
-router.route("/:id").get(getUserById).put(updateUser).delete(deleteUser);
+router.route("/:id").get(getUserById).patch(updateUser).delete(deleteUser);
 router.route("/bookings/:id").get(getUserBooking);
 
 module.exports = router;
