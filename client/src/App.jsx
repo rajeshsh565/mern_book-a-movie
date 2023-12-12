@@ -16,6 +16,7 @@ import AddMovies from "./components/Movies/AddMovies";
 import AdminProfile from "./Profile/AdminProfile";
 import { CssBaseline } from "@mui/material";
 import UnAuthorized from "./components/Auth/UnAuthorized.jsx";
+import PageNotFound from "./components/PageNotFound.jsx";
 
 
 
@@ -37,7 +38,7 @@ const app = () =>{
 
      return (
        <div>
-        <CssBaseline/>
+         <CssBaseline />
          <Header />
          <section>
            <Routes>
@@ -50,6 +51,7 @@ const app = () =>{
              <Route path="/add" element={<AddMovies />} />
              <Route path="/user-admin" element={<AdminProfile />} />
              <Route path="/unauthorized" element={<UnAuthorized />} />
+             <Route path="*" element={<PageNotFound />} />
            </Routes>
          </section>
        </div>
