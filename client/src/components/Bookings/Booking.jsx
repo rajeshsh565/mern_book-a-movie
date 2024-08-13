@@ -148,7 +148,7 @@ const Booking = () => {
         </>
       )}
 
-      {displaySuccess && bookingSuccess && (
+      {displaySuccess && bookingSuccess==true && (
         <>
           <Dialog open={true} PaperProps={{ style: { borderRadius: 10 } }}>
             <Box margin={4}>
@@ -172,7 +172,7 @@ const Booking = () => {
           </Dialog>
         </>
       )}
-      {displaySuccess && !bookingSuccess && (
+      {displaySuccess && bookingSuccess==false && (
         <>
           <Dialog open={true} PaperProps={{ style: { borderRadius: 10 } }}>
             <Box margin={4}>
