@@ -71,8 +71,8 @@ export const newBooking = async (data) => {
   const res = await axios
     .post("/api/v1/booking", {
       movie: data.movie,
-      seatNumber: data.seatNumber,
-      date: data.date,
+      seatNumber: Number(data.seatNumber),
+      date: new Date(data.date),
       user: localStorage.getItem("userId"),
     })
     .catch((err) => {
