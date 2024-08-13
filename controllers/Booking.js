@@ -25,7 +25,7 @@ const Booking = async (req, res, next) => {
     newBooking = new Bookings({
       movie,
       date: new Date(`${date}`),
-      seatNumber,
+      seatNumber: Number(seatNumber),
       user,
     });
 
